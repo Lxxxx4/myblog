@@ -1,0 +1,99 @@
+## 常用指令
+```js
+rm -rf dirname #删除文件夹
+lsb_release -a	#查看linux版本信息
+mv dirname  # 改文件夹的名字，改成node
+mkdir dirname # 创建文件夹 -p 确保目录名称存在，不存在的就建一个。
+```
+
+## 安装docker
+
+```js
+# 查看是否已安装docker列表
+yum list installed | grep docker
+# 安装docker
+yum -y install docker
+# 启动docker
+systemctl start docker
+# 查看docker服务状态
+systemctl status docker
+```
+
+## docker安装node
+
+```js
+# 获取node最新镜像
+docker pull node
+# 确认下node是否拉取成功
+docker images
+```
+
+## wget安装node
+
+```js
+# 查看是否已经安装了 wget
+wget -V 
+# 如果没有安装，使用 yum install wget 进行安装
+# 安装node
+wget https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz
+# 使用 tar 解压，tar 是 linux 下面压缩打包工具，x ---- 代表 获取到压缩包里面的所有文件，f ---- 代表要 处理的文件名，-v或--verbose 显示指令执行过程。
+xz -d ~ # 将tar.xz解压成tar文件
+tar -xvf ~ # 将tar文件解压成文件夹
+# 配置软连接，使全局都可以使用node命令
+ln -s /usr/local/node/bin/node /usr/bin/node 
+ln -s /usr/local/node/bin/npm /usr/bin/npm
+# 配置node文件安装路径，进入/usr/local/node/路径下:
+mkdir node_global
+mkdir node_cache
+npm config set prefix "node_global"
+npm config set cache "node_cache"
+# 安装cnpm
+npm install cnpm -g --registry=https://registry.npm.taobao.org
+```
+
+## wget安装mongodb
+
+```js
+# 安装
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.2.7.tgz
+# 解压
+tar -zxvf mongodb-linux-x86_64-3.0.6.tgz
+# 配置mongodb的path
+export PATH=/usr/local/mongodb/bin:$PATH
+# 创建数据库目录，/data/db 
+mkdir -p /data/db
+```
+
+## 防火墙命令
+
+```js
+# 启动防火墙
+systemctl start firewalld service
+# 关闭防火墙
+systemctl stop firewalld service
+# 重启防火墙
+systemctl restart firewalld service || firewall-cmd-reload
+# 开启开机启动
+systemctl enable firewalld
+# 禁止开机启动
+systemctl disable firewalld
+# 查看防火墙状态
+firewall-cmd-state
+
+# 查看防火墙开放的端口
+firewall-cmd --list-ports
+# 临时开放ftp服务
+firewall-cmd --add-service=ftp 
+# 开启端口
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+# 重载生效刚才的端口设置
+firewall-cmd --reload
+```
+
+## nginx
+
+```js
+# 查找配置文件位置
+nignx -t
+```
+

@@ -1,0 +1,45 @@
+## 1、 指令
+
+```java
+//打开一个控制台作为服务端，启动redis-server
+//再打开一个控制台启动服务，需要配置redis-cli.exe -h 127.0.0.1 -p 6379
+redis-server.exe		 redis.windows.conf为配置文件 
+//启动	redis-cli -h host -p port -a password		redis-cli -h 127.0.0.1 -p 6379 -a lin02618
+redis-cli.exe -h 127.0.0.1 -p 6379
+//修改密码
+config set requirepass “你的密码”
+// redis的环境安装
+打开cmd命令窗口，安装和注册redis到window服务，注意安装和启动服务这两个操作需要在解压Redis的根目录执行，这里才有Redis环境
+
+安装命令：redis-server.exe --service-install redis.windows.conf --loglevel verbose
+
+启动服务命令：redis-server.exe  --service-start
+关闭服务命令：redis-server.exe  --service-stop
+
+// 打开任务管理器
+
+```
+
+这样服务就启动成功了
+
+![1586933722434](./img/redis.png)
+
+##  2、RedisTemplate类
+
+https://blog.csdn.net/weixin_40461281/article/details/82011670 
+
+## redis简介
+
+> Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。 
+>
+> Redis就像是一个HashMap，不过不是在JVM中运行，而是以一个独立进程的形式运行。
+>
+> 一般说来，会被当作缓存使用。 因为它比数据库(mysql)快，所以常用的数据，可以考虑放在这里，这样就提高了性能。 
+
+ ####  Redis目前有5种数据类型
+
+- String（字符串） 
+- List（列表） 
+- Hash（字典）
+- Set（集合） 
+- Sorted Set（有序集合） 

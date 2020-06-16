@@ -1,0 +1,21 @@
+
+@media screen and (min-width:1200px) {
+  .slider {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width:1200px) and (min-width:740px) {
+  .slider {
+    width: 100%;
+  }
+}      
+
+@media screen and (max-width:740px) {
+  .slider {
+    width: 100%;
+  }
+}  

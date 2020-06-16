@@ -1,0 +1,18 @@
+.username {
+  margin-left: 10px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.avatar-wrap {
+  display: flex;
+  align-items: center;
+}
+.popover {
+  width: 100px;
+  text-align: center;
+  li {
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.audio-wrap {
+  position: fixed;
+  bottom: 80px;
+  left: -35px;
+  display: flex;
+  height: 70px;
+  &:hover {
+    transition: ease 1s all;
+    transform: translateX(35px);
+  }
+  .audio-cover {
+    position: relative;
+    background-image: linear-gradient(to right, #adadad, #3e3e3e);
+    width: 70px;
+    border-radius: 5px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+    .play-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 100;
+      font-size: 24px;
+      color: #fff;
+      animation: rotating 4s linear infinite;
+      animation-play-state: paused;
+      @keyframes rotating {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+    }
+  }
+  .audio-controll {
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #adadad, #3e3e3e);
+    width: 400px;
+    .audio-operation {
+      padding-left: 20px;
+      height: 40px;
+      color: #eae4e4;
+      .prev-btn, .next-btn{
+        cursor: pointer;
+        font-size: 24px;
+      }
+      .play-btn {
+        cursor: pointer;
+        font-size: 28px;
+        margin: 0 8px;
+      }
+      .music-name {
+        margin-left: 20px;
+        font-size: 18px;
+      }
+      .music-author {
+        margin-left: 20px;
+      }
+      
+    }
+    .music-progress {
+      display: flex;
+      margin-left: 20px;
+      width: 240px;   
+      color: #fff;
+      .music-currentTime {
+        margin-right: 10px;
+      }
+      .music-duration {
+        margin-left: 10px;
+      }
+    }
+  }
+}

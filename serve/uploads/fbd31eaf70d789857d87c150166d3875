@@ -1,0 +1,9 @@
+#### Git的常见指令
+
+```java
+//获取配置	 加上--global，则获取全局配置，加上 --system，则获取系统配置
+git config
+//可以通过以下命令查看所有的配置以及它们所在的文件：
+git config --list --show-origin
+```
+

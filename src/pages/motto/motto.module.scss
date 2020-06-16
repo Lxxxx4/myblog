@@ -1,0 +1,57 @@
+.motto-wrap {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .motto-content {
+    width: 80%;
+    padding: 0 10%;
+    height: 200px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .refresh-btn {
+    margin-bottom: 150px;
+    padding: 6px 40px;
+    font-size: 16px;
+    background-color: #096dd9;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .motto-wrap {
+    padding-top: 300px;
+  }
+}
+
+@media screen and (max-width:1200px) and (min-width:740px) {
+  .motto-wrap {
+    padding-top: 35%;
+    .motto-content {
+      font-size: 24px;
+    }
+  }
+}      
+
+@media screen and (max-width:740px) and (min-width:375px) {
+  .motto-wrap {
+    padding-top: 45%;
+    .motto-content {
+      font-size: 18px;
+    }
+  }
+}  
+@media screen and (max-width:375px) {
+  .motto-wrap {
+    padding-top: 35%;
+    .motto-content {
+      font-size: 16px;
+    }
+  }
+}  

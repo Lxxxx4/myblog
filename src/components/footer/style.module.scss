@@ -1,0 +1,45 @@
+.footer-wrap {
+  background: #313131;
+  width: 100%;
+  margin-top: 50px;
+  .footer-content {
+    margin: 0 auto;
+    display: flex;
+    color: #fff;
+    padding: 30px 20px;
+    .contact-me {
+      img {
+        width: 110px;
+        height: 110px;
+      }
+      div {
+        margin-top: 5px;
+        text-align: center;
+      }
+    }
+    .statement {
+      margin-left: 50px;
+      h3 {
+        color: #eee;
+      }
+      p {
+        color: #73777a;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .footer-content {
+    width: 1200px;
+    min-width: 1200px;
+  }
+}
+
+@media screen and (max-width:1000px) and (min-width:740px) {
+  
+}      
+
+@media screen and (max-width:740px) {
+  
+}  

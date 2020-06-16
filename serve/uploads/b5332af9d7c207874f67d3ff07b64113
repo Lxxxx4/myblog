@@ -1,0 +1,238 @@
+### 布局自适应
+
+```
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+#### 清除a标签的默认样式
+
+```css
+text-decoration: none;
+color:inherit;
+```
+
+#### 超出宽度的文本省略和文本超出块的宽度不换行
+
+```css
+<!-- 搭配使用 -->
+text-overflow: ellipsis;
+white-space: nowrap;  
+overflow:hidden; 
+```
+
+#### 鼠标禁止选择的样式
+
+```css
+cursor: not-allowed;
+```
+
+#### 当一组单选框存在时
+
+```html
+<!-- 为这一组单选框设置同一个name，相互关联 -->
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three is disabled
+  </label>
+</div>
+```
+
+####  对于标记了 `multiple` 属性的 <select> 控件来说，默认显示多选项。 
+
+```html
+<select multiple class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+```
+
+#### 在input标签上添加状态
+
+```html
+<!-- 禁止状态 -->
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<!-- 焦点状态 -->
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." focus>
+<!-- 只读状态 -->
+<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+```
+
+
+
+#### 去除input的默认样式
+
+
+
+#### radio样式
+```css
+display: inline-block;
+margin-left: 10px;
+border-radius: 10px;
+padding-left: 10px;
+box-shadow: none;
+outline-color: invert ;
+outline-style: none ;
+outline-width: 0px ;
+border: 1px solid #DFDFDF;
+/*border-style: none ;*/
+text-shadow: none ;
+-webkit-appearance: none ;
+-webkit-user-select: text ;
+outline-color: transparent ;
+```
+```css
+.radio1{
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    position: relative;
+}
+.radio1:before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 2px solid #C7C7C7;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.radio1:checked:before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 2px solid #94E2E6;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.radio1:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background:#CECECE;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+}
+.radio1:checked:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background:#73FD9E;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+}
+
+
+.radio2{
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    position: relative;
+}
+.radio2:before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 2px solid #C7C7C7;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.radio2:checked:before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 2px solid #FDEE7A;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.radio2:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background:#CECECE;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+}
+.radio2:checked:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background:#EDD19D;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+}
+
+```
+
+![](.\1573196612(1).png)
+
+#### 深度选择器
+> 当 <style> 标签有 scoped 属性时，它的 CSS 只作用于当前组件中的元素。实现方式是在你写的组件的样式，添加了一个属性而已，这样就实现了所谓的**私有作用域**。
+> ```css
+> .header[data-v-b86c55f0]
+> ```
+> 当我们希望scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 >>> 操作符:
+> ```css
+>  .parent >>> .child { /* ... */ }
+>  .parent[data-v-f3f3eg9] .child { 
+    /* ... */ 
+}
+> ```
+
+#### css-posttion
+```css
+/* 让区块居中，这个块元素需要有宽度 */
+.h-center-block {
+	margin: 0 auto;
+}
+/* 让块内元素水平居中 */
+.h-center-content{
+	text-align: center;
+}
+/* 让块内元素垂直居中居中 */
+.v-center-content {
+	line-height: 200px;
+}
+/* flex布局下让块内元素垂直居中和水平居中 */
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+#### css font-style
+> font-style: italic; /*斜体*/

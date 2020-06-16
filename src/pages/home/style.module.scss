@@ -1,0 +1,29 @@
+.content-wrap {
+  // min-width: 1200px;
+  // width: 1200px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media screen and (min-width:1200px) {
+  .content-wrap {
+    min-width: 1200px;
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width:1200px) and (min-width:740px) {
+  .content-wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+}      
+
+@media screen and (max-width:740px) {
+  .content-wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+}  

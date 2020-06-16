@@ -1,0 +1,12 @@
+.blogs-content {
+  margin: 20px auto 0 auto;
+  width: 1200px;
+  min-width: 1200px;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  background-color: #fff;
+  .content-left {
+    width: 100%;
+  }
+}

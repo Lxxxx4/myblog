@@ -1,0 +1,26 @@
+#### nginx命令
+```js
+//启动
+nginx.exe 或者 start nginx
+//	显示任务列表
+tasklist /fi "imagename eq nginx.exe" 
+//	检查80端口是否被占用
+netstat -ano | findstr "80"
+//	修改了nginx的配置文件nginx.conf重新启动nginx
+nginx -s reload 
+//从容停止服务，这种方法较stop相比就比较温和一些了，需要进程完成当前工作后再停止。
+nginx -s quit
+//立即停止服务，这种方法比较强硬，无论进程是否在工作，都直接停止进程。
+nginx -s stop
+nginx -s reopen    打开日志文件
+//killall 方法杀死进程，直接杀死进程，在上面无效的情况下使用，态度强硬，简单粗暴！
+taskkill /f /t /im nginx.exe
+// 查看版本
+nginx -v   
+//查看帮助信息
+nginx -h     
+```
+
+#### nginx配置
+##### 配置文件的结构图
+![](.\img\nginxframe.webp)

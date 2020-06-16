@@ -1,0 +1,50 @@
+
+.footer {
+  background-color: rgba(0,0,0,.65);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  margin-top: 50px;
+}
+.navlist {
+  display: flex;
+}
+.router-item {
+  font-size: 14px;
+  // padding: 0 20px;
+  color: #a3a3a3;
+  cursor: pointer;
+}
+.active {
+  color: #1890ff;
+}
+
+@media screen and (min-width:1000px) {
+  .router-item {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width:1000px) and (min-width:740px) {
+  .router-item {
+    padding: 0 5px;
+  }
+}      
+
+@media screen and (max-width:740px) {
+  .router-item {
+    padding: 0 5px;
+  }
+  .navlist {
+    margin-right: 30px;
+  }
+}  
+@media screen and (max-width:520px) {
+  .navlist {
+    display: none;
+  }
+}  

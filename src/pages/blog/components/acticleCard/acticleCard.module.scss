@@ -1,0 +1,51 @@
+.card-item {
+  margin: 10px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background-color: #cccccc1a;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  &:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 1px 1px 5px #888888;
+  }
+  .card-title {
+    font-family: -apple-system,SF UI Display,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    font-weight: 600;
+    color: #969696;
+  }
+  .card-content {
+    color: #999;
+  }
+  .card-info {
+    display: flex;
+    span {
+      padding: 0 5px;
+    }
+    .clicks {
+      margin-left: 10px;
+    }
+    .stars {
+      margin-left: 30px;
+    }
+    .create-time {
+      margin-left: 50px;
+    }
+    .tags {
+      margin-left: 50px;
+    }
+  }
+  .blog-orgin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    span {
+      padding: 0 5px;
+      font-size: 15px;
+      color: #fff;
+      background-color: greenyellow;
+      border-top-left-radius: 10px;
+    }
+  }
+}
